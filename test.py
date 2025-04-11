@@ -4,8 +4,7 @@ import tempfile
 import scipy.io.wavfile
 import base64
 import matplotlib.pyplot as plt
-from io import BytesIO
-from pydub import AudioSegment
+
 
 # --------------------------------------------------------
 # SIMPLIFIED MUSIC APP + AUDIO UPLOAD
