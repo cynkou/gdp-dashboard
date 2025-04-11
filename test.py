@@ -56,68 +56,11 @@ def part_one_ui():
     st.markdown(f"Estimated Total Play Time: **{total_time} seconds**")
     return music_input, duration
 
-######################## PART TWO   ##########################################
-def part_two_features(music_input, duration):
-    if st.button("▶️ Play"):
-        lines = music_input.strip().split("\n")
-        sequence = []
-        for line in lines:
-            notes = line.strip().split("+")
-            chord = []
-            for note in notes:
-                note = note.strip()
-                if note in NOTE_FREQUENCIES:
-                    chord.append(generate_sine_wave(NOTE_FREQUENCIES[note], duration))
-                else:
-                    st.warning(f"Note '{note}' not recognized. Skipping.")
-            if chord:
-                combined = np.mean(chord, axis=0)
-                sequence.append(combined)
-                sequence.append(generate_silence())
-        if sequence:
-            final = np.concatenate(sequence)
-            path = save_wave(final)
-            st.audio(path)
-            st.markdown(get_binary_download_link(path), unsafe_allow_html=True)
-
-    st.markdown("---")
-    st.header("📤 Upload a Song to Visualize Its Waveform")
-    uploaded_file = st.file_uploader("Upload a .wav or .mp3 file", type=["wav", "mp3"])
-    if uploaded_file:
-        st.audio(uploaded_file, format='audio/wav')
-        file_ext = uploaded_file.name.split(".")[-1].lower()
-        if file_ext == "mp3":
-            sound = AudioSegment.from_mp3(uploaded_file)
-            samples = np.array(sound.get_array_of_samples())
-            if sound.channels == 2:
-                samples = samples.reshape((-1, 2))
-                samples = samples.mean(axis=1)
-            sample_rate = sound.frame_rate
-        elif file_ext == "wav":
-            sound = AudioSegment.from_file(uploaded_file, format="wav")
-            samples = np.array(sound.get_array_of_samples())
-            if sound.channels == 2:
-                samples = samples.reshape((-1, 2)).mean(axis=1)
-            sample_rate = sound.frame_rate
-        else:
-            st.error("Unsupported file format.")
-            samples = None
-
-        if samples is not None:
-            duration_sec = len(samples) / sample_rate
-            st.markdown(f"**Sample Rate:** {sample_rate} Hz")
-            st.markdown(f"**Duration:** {round(duration_sec, 2)} seconds")
-            fig, ax = plt.subplots(figsize=(10, 3))
-            ax.plot(samples[:5000])
-            ax.set_title("Waveform Preview")
-            ax.set_xlabel("Sample Index")
-            ax.set_ylabel("Amplitude")
-            st.pyplot(fig)
 
 ######################## MAIN CALL  ##########################################
 def main():
     music_input, duration = part_one_ui()
-    part_two_features(music_input, duration)
+  
 
 if __name__ == "__main__":
     main()
