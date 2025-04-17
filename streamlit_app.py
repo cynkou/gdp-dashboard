@@ -66,9 +66,10 @@ gdp_df = get_gdp_data()
 '''
 # :earth_americas: Research on Generative AI 🤖
 
-Browse GDP data from the [World Bank Open Data](https://data.worldbank.org/) website. As you'll
-notice, the data only goes to 2022 right now, and datapoints for certain years are often missing.
-But it's otherwise a great (and did I mention _free_?) source of data.
+Generative AI has come a long way from what was introducdd back in 2022. To be more specific, the
+most well-known chat bot, ChatGPT developed by OpenAI, has continued to improve throughout the years and.
+remains as one of the most advanced tools to exist. Besides ChatGPT, there are other impressively advanced
+chatbots like Aria, Google Gemini, Microsoft Copilot, and more.
 '''
 
 # Add some spacing
