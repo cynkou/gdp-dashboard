@@ -106,7 +106,7 @@ filtered_gdp_df = gdp_df[
     & (from_year <= gdp_df['Year'])
 ]
 
-st.header('GDP over time', divider='gray')
+st.header('AI uses over time', divider='gray')
 
 ''
 
