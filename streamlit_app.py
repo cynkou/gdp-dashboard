@@ -66,8 +66,8 @@ gdp_df = get_gdp_data()
 '''
 # :earth_americas: Research on Generative AI 🤖
 
-Generative AI has come a long way from what was introducdd back in 2022. To be more specific, the
-most well-known chat bot, ChatGPT developed by OpenAI, has continued to improve throughout the years and.
+Generative AI has come a long way from what was introduced back in 2021. To be more specific, the
+most well-known chat bot, ChatGPT developed by OpenAI, has continued to improve throughout the years and
 remains as one of the most advanced tools to exist. Besides ChatGPT, there are other impressively advanced
 chatbots like Aria, Google Gemini, Microsoft Copilot, and more.
 '''
