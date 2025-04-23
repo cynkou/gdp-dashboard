@@ -25,8 +25,8 @@ def get_gdp_data():
     DATA_FILENAME = Path(__file__).parent/'data/gdp_data.csv'
     raw_gdp_df = pd.read_csv(DATA_FILENAME)
 
-    MIN_YEAR = 1960
-    MAX_YEAR = 2022
+    MIN_YEAR = 2014
+    MAX_YEAR = 2025
 
     # The data above has columns like:
     # - Country Name
@@ -66,10 +66,10 @@ gdp_df = get_gdp_data()
 '''
 # :earth_americas: Research on Generative AI 🤖
 
-Generative AI has come a long way from what was introduced back in 2021. To be more specific, the
+Generative AI has come a long way from what was introduced back in 2014. To be more specific, the
 most well-known chat bot, ChatGPT developed by OpenAI, has continued to improve throughout the years and
 remains as one of the most advanced tools to exist. Besides ChatGPT, there are other impressively advanced
-chatbots like Aria, Google Gemini, Microsoft Copilot, and more.
+chatbots like Sora, Google Gemini, Microsoft Copilot, and more.
 '''
 
 # Add some spacing
