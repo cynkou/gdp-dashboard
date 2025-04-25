@@ -117,7 +117,7 @@ elif section == "Data Visualization":
         raw_gdp_df = pd.read_csv(DATA_FILENAME)
 
         MIN_YEAR = 1960
-        MAX_YEAR = 2026 #2025
+        MAX_YEAR = 2025 #2025
 
         # The data above has columns like:
         # - Country Name
