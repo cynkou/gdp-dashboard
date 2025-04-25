@@ -112,7 +112,8 @@ elif section == "Data Visualization":
 
         # Instead of a CSV on disk, you could read from an HTTP endpoint here too.
     # DATA_FILENAME = Path(__file__).parent/'LuisStreamlit/gdp_datas.csv'
-        DATA_FILENAME = Path(__file__).parent/'data/gdp_datas.csv'
+       # DATA_FILENAME = Path(__file__).parent/'data/gdp_datas.csv'
+        DATA_FILENAME =r"/workspaces/gdp-dashboard/data/gdp_datas.csv"
         raw_gdp_df = pd.read_csv(DATA_FILENAME)
 
         MIN_YEAR = 1960
