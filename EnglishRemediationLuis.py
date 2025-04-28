@@ -228,7 +228,7 @@ elif section == "Data Visualization":
 
     #cols = st.columns(4)
 
-    f#or i, country in enumerate(selected_countries):
+    #for i, country in enumerate(selected_countries):
       #  col = cols[i % len(cols)]
 #
  #       with col:
