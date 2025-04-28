@@ -22,7 +22,7 @@ section = st.sidebar.radio("Navigate", [
 # welcome Page
 if section == "Welcome":
     st.markdown("### 📈 The Rise of Generative AI")
-    st.image("https://images.unsplash.com/photo-1658071379822-e197d17ae872", caption="AI in Education", use_container_width=True)
+    st.image("https://www.pega.com/sites/default/files/styles/1024/public/media/images/2023-11/pega-generative-ai-explainer-intro-img.png?itok=8AQr11PC", caption="AI in Education", use_container_width=True)
     st.write("Generative AI is changing how students learn, study, and engage with content. This project explores the **good**, the **bad**, and the **weird** of GenAI in academia.")
     st.success("Scroll through the tabs to interact, vote, simulate, and reflect!")
 
