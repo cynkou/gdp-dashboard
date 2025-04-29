@@ -39,7 +39,6 @@ elif section == "Research Questions":
     for q in questions:
         st.markdown(f"- {q}")
 
-# poll: Student Opinions
 # Dummy data for student AI use frequency
     survey_data = {
         "Use AI Often": 45,
@@ -260,31 +259,8 @@ elif section == "Data Visualization":
     #            delta=growth,
      #           delta_color=delta_color
       #      )
-    # Dummy data for student AI use frequency
-    survey_data = {
-        "Use AI Often": 45,
-        "Use Occasionally": 30,
-        "Do Not Use": 25
-    }
-
-    # Convert to DataFrame
-    survey_df = pd.DataFrame.from_dict(survey_data, orient='index', columns=["% of Students"])
-    survey_df.index.name = "Response"
-
-    # Chart of survey results
-    st.subheader("🗳️ How often do students use Generative AI tools (e.g., ChatGPT)?")
-    st.bar_chart(survey_df)
-
-    # Interpretation
-    st.markdown("""
-    - 🟢 **Use AI Often** – Students frequently rely on GenAI for writing, brainstorming, or studying.
-    - 🟡 **Use Occasionally** – These students use GenAI sparingly or for support roles only.
-    - 🔴 **Do Not Use** – Either unaware of the tools, prefer traditional methods, or fear ethical issues.
-    """)
-
-    st.info("This chart is based on a fictional survey. Replace it with real data from a class or form for more accurate results.")
-
-
+    
+    
 # conclusion
 elif section == "Conclusion":
     st.header("📚 Wrapping It Up")
