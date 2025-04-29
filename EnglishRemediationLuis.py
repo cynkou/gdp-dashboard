@@ -25,7 +25,7 @@ if section == "Welcome":
     st.image("https://www.pega.com/sites/default/files/styles/1024/public/media/images/2023-11/pega-generative-ai-explainer-intro-img.png?itok=8AQr11PC", caption="AI in Education", use_container_width=True)
     st.write("Generative AI has come a long way from what was introduced back in 2014. To be more specific, the\nmost well-known chat bot, ChatGPT developed by OpenAI, has continued to improve throughout the years and")
     st.write("remains as one of the most advanced tools to exist. Besides ChatGPT, there are other impressively advanced\nchatbots like Sora, Google Gemini, Microsoft Copilot, and more.")
-    st.success("Scroll through the tabs to interact, vote, simulate, and reflect!")
+    st.success("Click through the tabs to interact, vote, simulate, and reflect!")
 
 # research Questions
 elif section == "Research Questions":
