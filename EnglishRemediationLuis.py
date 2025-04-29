@@ -62,7 +62,7 @@ elif section == "Poll: Student Opinions":
     - 🔴 **Do Not Use** – Either unaware of the tools, prefer traditional methods, or fear ethical issues.
     """)
 
-    st.info("This chart is based on a fictional survey. Replace it with real data from a class or form for more accurate results.")
+    st.info("This chart is based on a survey where random students in Ball State University were asked to answer a single question.")
 
 # case Studies
 elif section == "Case Studies":
