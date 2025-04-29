@@ -175,7 +175,7 @@ elif section == "Data Visualization":
     '''
     # :earth_americas: Research on Generative AI 🤖
 
-    This chart demonstrates how the use of the now popular AI's has skyrocketed in just a couple years.
+    This chart demonstrates how the use of the now popular AI's has skyrocketed in just a couple of years.
     All data shown here has been collected using Google Trends' time frame.
 
     '''
