@@ -125,6 +125,7 @@ elif section == "Data Visualization":
         # Instead of a CSV on disk, you could read from an HTTP endpoint here too.
     # DATA_FILENAME = Path(__file__).parent/'LuisStreamlit/gdp_datas.csv'
        # DATA_FILENAME = Path(__file__).parent/'data/gdp_datas.csv'
+        #DATA_FILENAME =r"/workspaces/gdp-dashboard/data/AI_uses.csv"
         DATA_FILENAME =r"/workspaces/gdp-dashboard/data/AI_uses.csv"
         raw_gdp_df = pd.read_csv(DATA_FILENAME)
 
@@ -147,13 +148,14 @@ elif section == "Data Visualization":
         # - Year
         # - GDP
         #
-        # So let's pivot all those year-columns into two: Year and GDP
+        # So let's pivot all those year-columns into two: Year and Usage
         year_cols = [str(y) for y in range(MIN_YEAR, MAX_YEAR + 1) if str(y) in raw_gdp_df.columns]
         gdp_df = raw_gdp_df.melt(
-            id_vars =['AI Code'],
+            #id_vars =['Country Code'],
+            id_vars =['AI Name','AI Code'],
             value_vars = year_cols, 
             var_name = 'Year',
-            value_name = 'Usage (%)'
+            value_name = 'Usage (%)' #update
             #[str(x) for x in range(MIN_YEAR, MAX_YEAR + 1)],
             #'Year',
             #'GDP',
@@ -164,11 +166,18 @@ elif section == "Data Visualization":
 
         #return gdp_df
         gdp_df['Year'] = gdp_df['Year'].astype(int)
+     
+        
+   
+
         return gdp_df
 
-    gdp_df = get_gdp_data()
+    gdp_df= get_gdp_data()
 
     # -----------------------------------------------------------------------------
+  
+        
+    #-----------------------------------------------------------------------------
     # Draw the actual page
 
     # Set the title that appears at the top of the page.
@@ -184,19 +193,24 @@ elif section == "Data Visualization":
     ''
     ''
 
+
     min_value = gdp_df['Year'].min()
     max_value = gdp_df['Year'].max()
-
+    
+#value=[min_value, max_value]),
     from_year, to_year = st.slider(
         'Which years are you interested in?',
         min_value=min_value,
-        max_value=max_value +1,
-        value=[min_value, max_value])
-
+        #Original code
+        #max_value=max_value +1,
+        max_value=max_value,    #remove +1
+        value=(min_value, max_value),   
+        step = 1     #add in step
+        )
     countries = gdp_df['AI Code'].unique()
 
     if not len(countries):
-        st.warning("Select at least one AI")
+        st.warning("Select at least one country")
 
     selected_countries = st.multiselect(
         'Which AI would you like to view?',
@@ -206,7 +220,8 @@ elif section == "Data Visualization":
     ''
     ''
     ''
-
+    
+    # Filter and plot
     # Filter the data
     filtered_gdp_df = gdp_df[
         (gdp_df['AI Code'].isin(selected_countries))
@@ -221,14 +236,14 @@ elif section == "Data Visualization":
     st.line_chart(
         filtered_gdp_df,
         x='Year',
-        y='GDP',
-        color='Country Code',
+        y='Usage (%)', #Modify this
+        color='AI Code',
     )
 
     ''
     ''
-
-
+    
+    
     first_year = gdp_df[gdp_df['Year'] == from_year]
     last_year = gdp_df[gdp_df['Year'] == to_year]
 
