@@ -42,9 +42,9 @@ elif section == "Research Questions":
 # Dummy data for student AI use frequency
 elif section == "Poll: Student Opinions":
     survey_data = {
-        "Use AI Often": 45,
-        "Use Occasionally": 30,
-        "Do Not Use": 25
+        "Use AI Often": 8,
+        "Use Occasionally": 17,
+        "Do Not Use": 4
     }
 
     # Convert to DataFrame
@@ -62,7 +62,7 @@ elif section == "Poll: Student Opinions":
     - 🔴 **Do Not Use** – Either unaware of the tools, prefer traditional methods, or fear ethical issues.
     """)
 
-    st.info("This chart is based on a survey where random students in Ball State University were asked to answer a single question.")
+    st.info("This chart is based on a survey where random students in Ball State University were asked to answer a single question. This survey was completely anonymous.")
 
 # case Studies
 elif section == "Case Studies":
