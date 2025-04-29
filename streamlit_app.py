@@ -110,6 +110,8 @@ elif section == "AI Simulator":
         st.write(f"**Response:** Generative AI can write full essays on '{prompt}', but relying solely on AI may hinder your ability to critically evaluate information.")
         st.warning("Would this be ethical in your class?")
 
+
+@st.cache_data
 # data visualization
 #modification here'
 elif section == "Data Visualization":
