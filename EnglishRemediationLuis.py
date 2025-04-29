@@ -40,6 +40,7 @@ elif section == "Research Questions":
         st.markdown(f"- {q}")
 
 # Dummy data for student AI use frequency
+elif section == "Poll: Student Opinions":
     survey_data = {
         "Use AI Often": 45,
         "Use Occasionally": 30,
@@ -260,7 +261,7 @@ elif section == "Data Visualization":
      #           delta_color=delta_color
       #      )
     
-    
+
 # conclusion
 elif section == "Conclusion":
     st.header("📚 Wrapping It Up")
