@@ -111,11 +111,12 @@ elif section == "AI Simulator":
         st.warning("Would this be ethical in your class?")
 
 
-@st.cache_data
+
 # data visualization
 #modification here'
 elif section == "Data Visualization":
     #get_gdp_data()
+    @st.cache_data
     def get_gdp_data():
         """Grab GDP data from a CSV file.
 
