@@ -123,7 +123,7 @@ elif section == "Data Visualization":
         """
 
         # Instead of a CSV on disk, you could read from an HTTP endpoint here too.
-        DATA_FILENAME =r"cynkou/gdp-dashboard/data/AI_uses.csv"
+        DATA_FILENAME =r"/workspaces/gdp-dashboard/data/AI_uses.csv"
         raw_gdp_df = pd.read_csv(DATA_FILENAME)
 
         MIN_YEAR = 2018
