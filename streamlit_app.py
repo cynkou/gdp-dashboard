@@ -42,9 +42,9 @@ elif section == "Research Questions":
 # Dummy data for student AI use frequency
 elif section == "Poll: Student Opinions":
     survey_data = {
-        "Use AI Often": 8,
-        "Use Occasionally": 17,
-        "Do Not Use": 4
+        "Use AI Often": 27,
+        "Use Occasionally": 58,
+        "Do Not Use": 13
     }
 
     # Convert to DataFrame
