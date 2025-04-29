@@ -175,10 +175,9 @@ elif section == "Data Visualization":
     '''
     # :earth_americas: Research on Generative AI 🤖
 
-    Generative AI has come a long way from what was introduced back in 2014. To be more specific, the
-    most well-known chat bot, ChatGPT developed by OpenAI, has continued to improve throughout the years and
-    remains as one of the most advanced tools to exist. Besides ChatGPT, there are other impressively advanced
-    chatbots like Sora, Google Gemini, Microsoft Copilot, and more.
+    This chart demonstrates how the use of the now popular AI's has skyrocketed in just a couple years.
+    All data shown here has been collected using Google Trends' time frame.
+
     '''
 
     # Add some spacing
