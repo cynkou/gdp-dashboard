@@ -128,7 +128,7 @@ elif section == "Data Visualization":
         DATA_FILENAME =r"/workspaces/gdp-dashboard/data/gdp_datas.csv"
         raw_gdp_df = pd.read_csv(DATA_FILENAME)
 
-        MIN_YEAR = 2018
+        MIN_YEAR = 2014
         MAX_YEAR = 2025
 
         # The data above has columns like:
