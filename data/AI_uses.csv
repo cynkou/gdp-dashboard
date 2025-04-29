@@ -1,5 +1,5 @@
 ﻿Country Name,Country Code,Indicator Name,2018,2019,2020,2021,2022,2023,2024,2025
-ChatGPT,GPT,Uses(as percentage),0%,0%,0%,0%,0%,31%,66%,100%
-Sora,SRA,Uses(as percentage),0%,0%,0%,0%,0%,0%,100%,86%
-Google Gemini,GGI,Uses(as percentage),0%,0%,0%,0%,0%,45%,75%,100%
-Africa Western and Central,AFW,Uses(as percentage),0%,0%,0%,0%,0%,38%,98%,100%
+ChatGPT,GPT,Uses(as percentage),0.00,0.00,0.00,0.00,0.00,31.00,66.00,100.00
+Sora,SRA,Uses(as percentage),0.00,0.00,0.00,0.00,0.00,0.00,100.00,86.00
+Google Gemini,GGI,Uses(as percentage),0.00,0.00,0.00,0.00,0.00,45.00,75.00,100.00
+Microsoft Copilot,MCP,Uses(as percentage),0.00,0.00,0.00,0.00,0.00,38.00,98.00,100.00
