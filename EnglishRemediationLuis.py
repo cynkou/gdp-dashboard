@@ -23,7 +23,7 @@ section = st.sidebar.radio("Navigate", [
 if section == "Welcome":
     st.markdown("### 📈 The Rise of Generative AI")
     st.image("https://www.pega.com/sites/default/files/styles/1024/public/media/images/2023-11/pega-generative-ai-explainer-intro-img.png?itok=8AQr11PC", caption="AI in Education", use_container_width=True)
-    st.write("Generative AI has come a long way from what was introduced back in 2014. To be more specific, the\nmost well-known chat bot, ChatGPT developed by OpenAI, has continued to improve throughout the years and")
+    st.write("Generative AI has come a long way from what was introduced back in 2018. To be more specific, the\nmost well-known chat bot, ChatGPT developed by OpenAI, has continued to improve throughout the years and")
     st.write("remains as one of the most advanced tools to exist. Besides ChatGPT, there are other impressively advanced\nchatbots like Sora, Google Gemini, Microsoft Copilot, and more.")
     st.success("Click through the tabs to interact, vote, simulate, and reflect!")
 
@@ -128,7 +128,7 @@ elif section == "Data Visualization":
         DATA_FILENAME =r"/workspaces/gdp-dashboard/data/gdp_datas.csv"
         raw_gdp_df = pd.read_csv(DATA_FILENAME)
 
-        MIN_YEAR = 2014
+        MIN_YEAR = 2018
         MAX_YEAR = 2025
 
         # The data above has columns like:
