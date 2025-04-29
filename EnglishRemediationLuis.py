@@ -113,7 +113,6 @@ elif section == "AI Simulator":
 # data visualization
 #modification here'
 elif section == "Data Visualization":
-    st.header("📈 Survey Data: GenAI in Academia")
     #get_gdp_data()
     def get_gdp_data():
         """Grab GDP data from a CSV file.
@@ -130,7 +129,7 @@ elif section == "Data Visualization":
         raw_gdp_df = pd.read_csv(DATA_FILENAME)
 
         MIN_YEAR = 2018
-        MAX_YEAR = 2025 #2025
+        MAX_YEAR = 2025
 
         # The data above has columns like:
         # - Country Name
