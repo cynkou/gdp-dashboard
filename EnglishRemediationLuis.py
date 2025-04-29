@@ -221,7 +221,7 @@ elif section == "Data Visualization":
     st.line_chart(
         filtered_gdp_df,
         x='Year',
-        y='GDP',
+        y='Uses',
         color='Country Code',
     )
 
