@@ -40,17 +40,29 @@ elif section == "Research Questions":
         st.markdown(f"- {q}")
 
 # poll: Student Opinions
-elif section == "Poll: Student Opinions":
-    st.header("📊 Live Poll")
-    poll = st.radio("Do you personally use generative AI (like ChatGPT) for school?", 
-                    ("Yes - all the time", "Sometimes", "Never"))
+# Dummy data for student AI use frequency
+    survey_data = {
+        "Use AI Often": 45,
+        "Use Occasionally": 30,
+        "Do Not Use": 25
+    }
 
-    st.write("Thanks for voting! Here's what others think:")
-    st.bar_chart(pd.Series({
-        "Yes - all the time": random.randint(10, 30),
-        "Sometimes": random.randint(20, 50),
-        "Never": random.randint(5, 20)
-    }))
+    # Convert to DataFrame
+    survey_df = pd.DataFrame.from_dict(survey_data, orient='index', columns=["% of Students"])
+    survey_df.index.name = "Response"
+
+    # Chart of survey results
+    st.subheader("🗳️ How often do students use Generative AI tools (e.g., ChatGPT)?")
+    st.bar_chart(survey_df)
+
+    # Interpretation
+    st.markdown("""
+    - 🟢 **Use AI Often** – Students frequently rely on GenAI for writing, brainstorming, or studying.
+    - 🟡 **Use Occasionally** – These students use GenAI sparingly or for support roles only.
+    - 🔴 **Do Not Use** – Either unaware of the tools, prefer traditional methods, or fear ethical issues.
+    """)
+
+    st.info("This chart is based on a fictional survey. Replace it with real data from a class or form for more accurate results.")
 
 # case Studies
 elif section == "Case Studies":
